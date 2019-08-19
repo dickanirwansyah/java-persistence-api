@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="util/header-element.html :: header"/>
+<body>
+    <div th:replace="util/navbar-element.html :: navbar"></div>
+        <div class="container">
+            <div class="container-fluid">
+                <h3 class="alert alert-info" th:utext="${title}"></h3>
+                <button type="button" class="btn btn-primary addProduct">Add Product</button>
+                <div class="page-header">
+
+                    <!--modal-->
+                    <div class="modal fade modalProduct" id="modal-product" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog" role="dialog">
+                            <div class="modal-content" role="document">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">x</button>
+                                </div>
+                                <div class="modal-body">
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default">Save</button>
+                                    <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--modal-->
+
+                    <table class="table table-bordered table-hover table-striped" id="tabel-product">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>PRICE</th>
+                                <th>STOCK</th>
+                                <th>CATEGORY</th>
+                                <th>CREATED</th>
+                                <th>UPDATED</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>PRICE</th>
+                            <th>STOCK</th>
+                            <th>CATEGORY</th>
+                            <th>CREATED</th>
+                            <th>UPDATED</th>
+                            <th>Action</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <div th:replace="util/footer-element.html :: footer"></div>
+</body>
+</html>

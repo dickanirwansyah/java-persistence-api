@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="util/header-element.html :: header"/>
+<body>
+    <div th:replace="util/navbar-element.html :: navbar"></div>
+      <div class="container">
+          <div class="container-fluid">
+              <h3 class="alert alert-success">Transaction</h3>
+              <div class="page-header">
+                  <table class="table table-hover table-striped" id="tabel-transaction">
+                      <thead>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                        <th>STOCK</th>
+                        <th>BUY</th>
+                      </thead>
+                      <tbody></tbody>
+                      <tfoot>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>PRICE</th>
+                        <th>STOCK</th>
+                        <th>BUY</th>
+                        </tfoot>
+                  </table>
+              </div>
+          </div>
+      </div>
+    <div th:replace="util/footer-element.html :: footer"></div>
+</body>
+</html>
