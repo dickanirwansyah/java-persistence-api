@@ -24,8 +24,8 @@ public class Transaction implements Serializable {
     @Column(name = "ID")
     private int id;
 
-    @Column(name = "CURRENT_DATE")
-    private Date currentDate;
+    @Column(name = "CREATED_AT")
+    private Date createdAt;
 
     @Column(name = "CREATED_BY")
     private String createdBy;

@@ -1,5 +1,6 @@
 package com.persistence.examplecartjpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,6 +28,7 @@ public class TransactionProduct implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "TRANSACTION_ID")
+    @JsonIgnore
     private Transaction transaction;
 
     @Column(name = "PRICE")

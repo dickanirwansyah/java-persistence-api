@@ -66,13 +66,6 @@ $(document).ready(function(){
     }
 });
 
-$(document).on('click', '.buy', function(){
-    var productId = $(this).attr("data-id");
-    console.log("product id : "+productId);
-    $.ajax({
-        url:"http://localhost:8888/add-to-cart/"+productId
-    });
-});
 
 $(document).on('click', '.addProduct', function(){
     $(".modalProduct").modal('show');
